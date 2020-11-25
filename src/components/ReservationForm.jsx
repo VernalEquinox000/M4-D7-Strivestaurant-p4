@@ -76,14 +76,14 @@ class ReservationForm extends React.Component {
         return (
             <div>
                 {
-                    this.state.errMessage && (
+                if(this.state.errMessage){
                         <Alert variant="danger">
                             We encountered a problem with your request
                             {this.state.errMessage}
                         </Alert>
-                    )
                 }
-                {
+                
+                else {
                     this.state.loading && (
                         <div className="d-flex justify-content-center my-5">
                             Reserving your table, please wait

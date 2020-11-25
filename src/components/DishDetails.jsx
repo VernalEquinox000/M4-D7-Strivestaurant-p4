@@ -1,6 +1,6 @@
 import React from 'react'
 import { Badge, Card, Col, Container, Row } from 'react-bootstrap'
-import { DishComments } from './DishComments'
+import DishComments from './DishComments'
 import allTheDishes from '../data/menu.json'
 
 class DishDetails extends React.Component {
@@ -13,7 +13,9 @@ class DishDetails extends React.Component {
         let correctDishToLoad = allTheDishes.find(dish => dish.id.toString() === dishIdFromTheSearchBar)
         this.setState({
             dish: correctDishToLoad
+            
         })
+        console.log(correctDishToLoad)
     }
 
     render() {
